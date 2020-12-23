@@ -27,41 +27,40 @@
 	- Modificar el router para que nos dirija por default a la nueva pagina
 		```{ path:'', redirectTo:'paises', pathMatch:'full'},```
 	
-	- Crear los modelos de Paises (con namespace)
-	Clase de Pais y PaisParams
+	- Crear los modelos de Paises (con namespace): Clase de Pais y PaisParams
 	
 	- **MAIN **: 
-		Agregar un form tipo Main: *axe-form*
-		Agregar una tabla en seccion form-body: *axe-table*
-		Declarar los rows:  *tablerows*
-		Agregar template de resultados:
+		1. Agregar un form tipo Main: *axe-form*
+		2. Agregar una tabla en seccion form-body: *axe-table*
+		3. Declarar los rows:  *tablerows*
+		4. Agregar template de resultados:
 		``` <ng-template #resultsFrame let-item></ng-template>```
-		Crear data y bindiar el resultado: crear datos locales para probar la tabla
+		5. Crear data y bindiar el resultado: crear datos locales para probar la tabla
 	
 	- **SEARCH**:
-		Agregar un form tipo Search dentro de un ng-template
-		Agregar funcion para mostrarlo desde el boton buscar del Main: *(onShowSearch)*
-		Importar NGXBoostrap Modal desde el constructor
-		Guardar la referencia que genera el modal en una variable (para luego apagarlo)
-		Control de errores: *UINotificationHelper* de @agilis/common
-		Agregar una funcion para cerrar el modal: utilizando la referencia
-		Agrear input: *axe-input*
-		Bindiarlo a una variable local para luego utilizarlo
-		Agregar boton de buscar al form de Search
-		Agregar una funcion que realizar la busqueda: *get()* : probar con datos locales
+		1. Agregar un form tipo Search dentro de un ng-template
+		2. Agregar funcion para mostrarlo desde el boton buscar del Main: *(onShowSearch)*
+		3. Importar NGXBoostrap Modal desde el constructor
+		4. Guardar la referencia que genera el modal en una variable (para luego apagarlo)
+		5. Control de errores: *UINotificationHelper* de @agilis/common
+		6. Agregar una funcion para cerrar el modal: utilizando la referencia
+		7. Agrear input: *axe-input*
+		8. Bindiarlo a una variable local para luego utilizarlo
+		9. Agregar boton de buscar al form de Search
+		10. Agregar una funcion que realizar la busqueda: *get()* : probar con datos locales
 	
 	-  **SERVICE**:
-		Crear un servicio que permita llamar a la API de Agilis.Common
-		Crear un metodo "get()" que retorne la lista de paises 
-		Guardar la url del rest en los *enviroments*
+		1. Crear un servicio que permita llamar a la API de Agilis.Common
+		2. Crear un metodo "get()" que retorne la lista de paises 
+		3. Guardar la url del rest en los *enviroments*
 		
 		-** DATA**:
-		Crear form: copiando search pero del tipo "Data"
-		Agregar un boton en el Main en la seccion *form-header-buttons-end* que active el nuevo form.
-		Agregar funciones de show, close del modal y una funcion *set()* para cuando se confirma.
-		Agregar los inputs para los datos del Pais (solo los que NO son null)
-		Agregar el nuevo registro al array local (prueba local)
-		Bindear los datos de los input  a un objeto local *itemSelected * para reutilizar el form.
+		1. Crear form: copiando search pero del tipo "Data"
+		2. Agregar un boton en el Main en la seccion *form-header-buttons-end* que active el nuevo form.
+		3. Agregar funciones de show, close del modal y una funcion *set()* para cuando se confirma.
+		4. Agregar los inputs para los datos del Pais (solo los que NO son null)
+		5. Agregar el nuevo registro al array local (prueba local)
+		6. Bindear los datos de los input  a un objeto local *itemSelected * para reutilizar el form.
 
 
 ## Como utilizar el ejemplo
